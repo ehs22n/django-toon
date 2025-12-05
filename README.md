@@ -1,3 +1,7 @@
+language: [Farsi](https://github.com/ehs22n/toonio/blob/main/docs/readme_fa.md)  -- [Russian](https://github.com/ehs22n/toonio/blob/main/docs/readme_ru.md) -- [chinese](https://github.com/ehs22n/toonio/blob/main/docs/readme_ch.md) 
+
+
+
 **toonio** is a package for sending data in the **Toon** format, `which is several times faster than JSON`.
 
 This library also supports integration with **Django** views and provides compatibility for use in **FastAPI** as well.

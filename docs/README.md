@@ -1,4 +1,4 @@
-language: [Farsi](./readme_fa.md)  -- [Russian](./readme_ru.md) -- [chinese](./readme_ch.md) 
+language: [Farsi](https://github.com/ehs22n/toonio/blob/main/docs/readme_fa.md)  -- [Russian](https://github.com/ehs22n/toonio/blob/main/docs/readme_ru.md) -- [chinese](https://github.com/ehs22n/toonio/blob/main/docs/readme_ch.md) 
 
 
 
