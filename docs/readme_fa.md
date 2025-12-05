@@ -8,6 +8,10 @@
 
 ## استفاده
 
+```python
+pip install "toonio[django]"
+```
+
 ### بازگرداندن **Toon** برای همه درخواست‌ها
 
 ```python
@@ -91,6 +95,10 @@ class Index(APIView):
 ---
 
 # استفاده در FastAPI
+
+```python
+pip install "toonio[standard]"
+```
 
 ```python
 from fastapi import FastAPI

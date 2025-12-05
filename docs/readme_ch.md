@@ -8,6 +8,10 @@
 
 ## 使用方式
 
+```python
+pip install "toonio[django]"
+```
+
 ### 为所有请求返回 **Toon**
 
 ```python

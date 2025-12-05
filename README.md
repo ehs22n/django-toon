@@ -10,7 +10,12 @@ The library offers two important features for **Django**. For example, you can c
 
 # toonio — Django Integration Guide
 
+
 ## Usage
+
+```python
+pip install "toonio[django]"
+```
 
 ### Return **Toon** for all requests
 
@@ -103,6 +108,11 @@ class Index(APIView):
 ---
 
 # Usage in FastApi:
+
+```python
+pip install "toonio[standard]"
+```
+
 
 ```python
 
