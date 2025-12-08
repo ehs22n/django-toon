@@ -1,31 +1,34 @@
-language: [Farsi](https://github.com/ehs22n/toonio/blob/main/docs/readme_fa.md)  -- [Russian](https://github.com/ehs22n/toonio/blob/main/docs/readme_ru.md) -- [chinese](https://github.com/ehs22n/toonio/blob/main/docs/readme_ch.md) 
+language: [Farsi](https://github.com/ehs22n/django_toon/blob/main/docs/README.fa.md)  -- [Arabic](https://github.com/ehs22n/django_toon/blob/main/docs/README.ar.md)
 
 
 
-**toonio** is a package for sending data in the **Toon** format, `which is several times faster than JSON`.
+**django-toon** is a package for sending data in the **Toon** format, `which is several times faster than JSON`.
 
-This library also supports integration with **Django** views and provides compatibility for use in **FastAPI** as well.
 
 The library offers two important features for **Django**. For example, you can create `dynamic` views that can return either `JSON` or `Toon` based on the request.
 
-# toonio — Django Integration Guide
+# django_toon — Django Integration Guide
 
 
-## Usage
+## Usage:
+
+### Installation
 
 ```python
-pip install "toonio[django]"
+pip install "django-toon"
 ```
+---
 
-### Return **Toon** for all requests
+## Return **Toon** for all requests
 
+#### settings.py
 ```python
 REST_FRAMEWORK = {
     'DEFAULT_RENDERER_CLASSES': [
-        'toonio.django.render.ToonRenderer',
+        'django_toon.django.render.ToonRenderer',
     ],
     'DEFAULT_PARSER_CLASSES': [
-        'toonio.django.parser.ToonParser',
+        'django_toon.django.parser.ToonParser',
     ],
 }
 ```
@@ -35,10 +38,10 @@ REST_FRAMEWORK = {
 ```python
 REST_FRAMEWORK = {
     'DEFAULT_RENDERER_CLASSES': [
-         'toonio.django.render.DynamicRenderer',
+         'django_toon.django.render.DynamicRenderer',
     ],
     'DEFAULT_PARSER_CLASSES': [
-        'toonio.django.parser.DynamicParser',
+        'django_toon.django.parser.DynamicParser',
     ],
 }
 
@@ -76,65 +79,43 @@ Accept: application/json
 
 ### Dynamic view
 
+#### views.py
+
 ```python
-from toonio.django.parser import DynamicParser
-from toonio.django.render import DynamicRenderer
+from django_toon.parser import DynamicParser
+from django_toon.render import DynamicRenderer
 
 class Index(APIView):
     parser_classes = [DynamicParser]
     renderer_classes = [DynamicRenderer]
 
     def get(self, request, *args, **kwargs):
-        return Response({"message": "Hello Toon"})
+        return Response({"message": "Hello django-toon"})
 
 ```
 
 ### Toon-only view
 
 ```python
-from toonio.django.parser import ToonParser
-from toonio.django.render import ToonRenderer
+from django_toon.parser import ToonParser
+from django_toon.render import ToonRenderer
 
 class Index(APIView):
     parser_classes = [ToonParser]
     renderer_classes = [ToonRenderer]
 
     def get(self, request, *args, **kwargs):
-        return Response({"message": "Hello Toon"})
+        return Response({"message": "Hello django-toon"})
 
 
 ```
 
 ---
 
-# Usage in FastApi:
-
-```python
-pip install "toonio[standard]"
-```
-
-
-```python
-
-from fastapi import FastAPI
-
-from toonio.response import Response
-from toonio.status import HTTP_200_OK
-
-app = FastAPI()
-
-
-@app.get("/")
-def hello_toon():
-    return Response({"Hello": "Toon"}, status_code=HTTP_200_OK) # Return Toon Response
-
-```
-
----
 
 # Contributing
 
-We warmly welcome all contributions to Toonio!
+We warmly welcome all contributions to django-toon!
 Whether you have an idea for improvement, found a bug, or want to add a new feature, we would be happy to have your help.
 
 How to contribute
@@ -165,8 +146,8 @@ We do our best to respond and fix issues as quickly as possible.
 --
 
 
-# Toonio License (MIT-based Open License)
-Copyright (c) 2025 Toonio Developers
+# django-toonLicense (MIT-based Open License)
+Copyright (c) 2025 django-toon Developers
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
