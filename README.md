@@ -1,4 +1,4 @@
-language: [Farsi](https://github.com/ehs22n/django_toon/blob/main/docs/README.fa.md)  -- [Arabic](https://github.com/ehs22n/django_toon/blob/main/docs/README.ar.md)
+language: [Farsi](https://github.com/ehs22n/django-toon/blob/main/docs/README.fa.md)  -- [Arabic](https://github.com/ehs22n/django-toon/blob/main/docs/README.ar.md)
 
 
 
