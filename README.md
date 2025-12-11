@@ -7,7 +7,7 @@ language: [Farsi](https://github.com/ehs22n/django-toon/blob/main/docs/README.fa
 
 The library offers two important features for **Django**. For example, you can create `dynamic` views that can return either `JSON` or `Toon` based on the request.
 
-# django_toon — Django Integration Guide
+# django-toon — Django Integration Guide
 
 
 ## Usage:
