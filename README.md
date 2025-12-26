@@ -113,6 +113,28 @@ class Index(APIView):
 ---
 
 
+### How to Test API:
+```bash
+source .venv/bin/activate
+```
+
+```bash
+$ django-toon version
+
+> 0.1.1
+```
+
+> you can use GET and POST method to test your api
+
+```bash
+$ django-toon get https://exmaple.com/
+```
+
+```bash
+$ django-toon post https://exmaple.com/ --payload '{"key": "value"}'
+
+```
+
 # Contributing
 
 We warmly welcome all contributions to django-toon!
